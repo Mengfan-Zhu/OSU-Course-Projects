@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- for category notification setting -->
+    <string-array name="notification">
+        <item>1 day before</item>
+        <item>3 days before</item>
+        <item>1 week before</item>
+        <item>2 weeks before</item>
+        <item>1 month before</item>
+    </string-array>
+</resources>

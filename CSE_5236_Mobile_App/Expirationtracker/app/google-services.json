@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "898677502538",
+    "firebase_url": "https://expirationtracker-d075f.firebaseio.com",
+    "project_id": "expirationtracker-d075f",
+    "storage_bucket": "expirationtracker-d075f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898677502538:android:542c2cfa17e65cf953acb3",
+        "android_client_info": {
+          "package_name": "com.example.expirationtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "898677502538-v1k2013lsai012f5hb74jiadolnft1pk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATOHJSV2P93ovBxDY9mUrcdboYVFU6b1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "898677502538-v1k2013lsai012f5hb74jiadolnft1pk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

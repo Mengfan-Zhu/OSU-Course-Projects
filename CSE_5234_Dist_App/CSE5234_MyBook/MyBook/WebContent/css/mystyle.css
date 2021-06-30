@@ -1,0 +1,112 @@
+@CHARSET "ISO-8859-1";
+
+html {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	margin: 10px;
+	padding: 0px;
+	height: 100%;
+	background-color: #EBF5FB;
+	text-align:center;
+	padding-bottom: 70px;
+}
+
+header {
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+	width: 100%;
+	color:#fff;
+	float: none;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 20px 0;
+    margin-top: 10px;
+}
+
+footer p {
+	height: 10px;
+}
+
+nav{
+	text-align: center;
+	padding: 0 10px;
+}
+
+nav li{
+	margin: 0 20px;
+}
+
+.home{
+	padding: 20px;
+	margin: 30px;
+	background-color: #DAF7A6;
+}
+
+.info{
+	width: 45%;
+	height: 300px;
+	float: left;
+	padding: 15px;
+	margin: 2.5%;
+	background-color: #FDFEE1;
+}
+.contact{
+	padding: 20px;
+	margin: 30px;
+	background-color: #EBDCFE;
+}
+img {
+	height: 40%;
+}
+
+td{
+	
+	 border-collapse: collapse;
+	 padding: 0 10px;
+	 height: 40px;
+}
+table{
+ 	border-collapse: collapse;
+ 	width: 80%;
+ 	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	background-color: #F5EEF8;
+
+}
+th {
+	padding: 0 10px;
+	color: #424242;
+	
+}
+.hidden{
+ 	border: 0;
+}
+input{
+	margin: 10px 0;
+}
+.inputs input{
+	width: 100%;
+}
+.confirm{
+	text-align: center;
+	background-color: #F7F9F9;
+	color: #0E6655;
+	margin: 10px 0;
+	padding: 5px;
+}
+.message{
+	margin: 10px 0;
+}
+.message p{
+	margin:0;
+}
+
+
