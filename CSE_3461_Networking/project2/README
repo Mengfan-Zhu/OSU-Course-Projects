@@ -1,0 +1,65 @@
+Basic information
+This project is a file sharing platform.
+This project is wrote in python 3.6, using PyCharm as the IDE.
+This project has a gui for the client, using tkinter package for gui
+
+########################################################################################################################
+How to run
+go to the project2 folder, open the terminal window and type commands to run server and client.
+
+Sample command for server:
+    python ftps.py 1500
+you may need to use "python3" instead "python" if you have both python2 & 3 in your computer.
+"1500" is the port number for server, you can change it
+
+Sample command for client:
+    python ftpc.py DESKTOP-73DGQV2 1500 1600
+you may need to use "python3" instead "python" if you have both python2 & 3 in your computer.
+"DESKTOP-73DGQV2" is the hostname for server, you may change it according to the server you use. There is a commented
+code in server.py line 11 which you can uncomment to print the server hostname
+"1500" is the port number for server, it should be the same as the port number you give when run server
+"1600" is the port number for client, you can change it
+
+You can also change the _init_ function in server and client to set certain values to hostname and port number so that
+you don't need to input them every time.
+
+########################################################################################################################
+List of files
+ftps.py
+    source code for server, including a Server class and code for running server
+ftpc.py
+    source code for client, including a Client class and code for running client
+upload folder
+    folder for files to share, including some files for testing, you can add the file you want to share in this folder
+download folder
+    folder for download files, the files you download will appear here
+README
+    this file
+
+########################################################################################################################
+The user manual for client
+
+When you run client, it will show a gui window. You can see a menu of operations you can choose, including share, list,
+search and download. You can click the corresponding button to choose.
+
+If you click "Share" button, there will be a new window to ask you input the filenames. You can input names of the files
+you want to share, separating each filename by whitespace.Therefore, the filename can't include whitespace. After you
+input the file list, you can click submit button, and you will come back to the menu.
+
+If you click "List" button, there will be a new window to show you all the files that the server has access to.
+
+If you click "Search" button, there will be a new window to ask you input the filename you want to search. After you
+click submit button, there will be a message box pop up to tell you whether this file is exist.
+
+If you click "Download" button, there will be a new window to ask you input the filename you want to download. After
+you click submit button, there will be a message box pop up to tell you the file size and whether the file download
+success(whether the download file size matches the origin file size). You can see the download file under the download
+folder.
+
+For all input boxes, they can't be empty when you submit, otherwise there will be a error message box. There is a return
+button for input windows and list window to help you return to the menu window.
+
+
+
+
+

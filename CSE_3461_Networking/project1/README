@@ -1,0 +1,63 @@
+Basic information
+This project is an instant messaging platform.
+This project is wrote in python 3.6, using PyCharm as the IDE.
+This project has a gui for the client, using tkinter package for gui
+
+########################################################################################################################
+How to run
+go to the project1 folder, open the terminal window and type commands to run server and client.
+
+Sample command for server:
+    python server.py 1500
+you may need to use "python3" instead "python" if you have both python2 & 3 in your computer.
+"1500" is the port number for server, you can change it
+
+Sample command for client:
+    python client.py DESKTOP-73DGQV2 1500 1600
+you may need to use "python3" instead "python" if you have both python2 & 3 in your computer.
+"DESKTOP-73DGQV2" is the hostname for server, you may change it according to the server you use. There is a commented
+code in server.py line 13 which you can uncomment to print the server hostname
+"1500" is the port number for server, it should be the same as the port number you give when run server
+"1600" is the port number for client, you can change it
+
+You can also change the _init_ function in server and client to set certain values to hostname and port number so that
+you don't need to input them every time.
+
+########################################################################################################################
+List of files
+server.py
+    source code for server, including a Server class and code for running server
+client.py
+    source code for client, including a Client class and code for running client
+users.csv
+    a csv file to store the registered users, each line is a user, including username and password
+README
+    this file
+
+########################################################################################################################
+The user manual for client
+
+When you run client, it will show a gui window. You can see a menu for register and login, and you can click the button.
+Then, there will be a new window to ask you input username and password, they you can click submit button to submit it.
+For register, there will be a message box to tell you whether you register success or not. For login, if fail, there
+will be a message box tell you; if success, it will go to a new window and show a menu of operations you can choose.
+
+The operations to choose after login including list, message and logout. If you click list, there will be a new window
+to show you the username of active users. If you click message, there will be a new window to ask you input the username
+of whom you want to send the message to and the message you want to send. Then you can click the submit button and
+a message box will tell you whether you send it success or not. If you click logout, it will close the connection and
+the gui window.
+
+After you login, you are the active user and other users can see your name and send message to you. Once there is a
+message come, there will be a message box pop up and tell you who send you what message.
+
+For all input boxes, they can't be empty when you submit, otherwise there will be a error message box. There is a return
+button for input windows and list window to help you return to the previous menu window.
+
+
+
+
+
+
+
+
