@@ -1,0 +1,3 @@
+sbatch batch_file
+squeue -u mengfan
+scancel [jobid]

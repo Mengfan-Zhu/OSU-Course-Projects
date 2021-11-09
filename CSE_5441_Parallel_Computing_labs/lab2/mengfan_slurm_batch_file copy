@@ -1,0 +1,30 @@
+#!/bin/bash
+#SBATCH --account=PAS1906
+#SBATCH --cluster=owens
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=28
+#SBATCH --time=00:15:00
+#SBATCH --job-name=lab2
+
+export DATAFILE='PC_data_t01000'
+export EXECFILE1='lab1_mengfan_zhu.2420'
+export EXECFILE2='lab2_mengfan_zhu.2420'
+export PNUM=1
+export CNUM=1
+
+echo job started at `date`
+echo on compute node `cat ${PBS_NODEFILE}`
+
+cd ${SLURM_SUBMIT_DIR}
+# /users/PAS1906/mengfan/CSE_5441/test
+cp ${DATAFILE} ${TMPDIR}
+cd ${TMPDIR}
+echo ${EXECFILE2} ${DATAFILE}  >>current.out
+echo job started at `date` >>current.out
+time ${SLURM_SUBMIT_DIR}/${EXECFILE2} <${DATAFILE}  >>current.out 2>&1
+echo job ended at `date` >>current.out
+
+export SAVEDIR=${SLURM_SUBMIT_DIR}'/results'
+# mkdir ${SAVEDIR}
+mv current.out lab2_${PBS_JOBID}.out
+mv lab2_${PBS_JOBID}.out ${SAVEDIR}

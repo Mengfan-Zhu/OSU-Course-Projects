@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH --account=PAS1906
+#SBATCH --cluster=owens
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=28
+#SBATCH --time=00:15:00
+#SBATCH --job-name=prod_cons_single_thread
+
+export DATAFILE='PC_data_t00100'
+export EXECFILE='lab1_osu1053_jones.5374'
+
+echo job started at `date`
+echo on compute node `cat ${PBS_NODEFILE}`
+
+cd ${SLURM_SUBMIT_DIR}
+# /users/PAS1211/osu1053/CSE_5441/lab1
+cp ${DATAFILE} ${TMPDIR}
+cd ${TMPDIR}
+
+echo job started at `date` >>current.out
+time ${SLURM_SUBMIT_DIR}/${EXECFILE} <${DATAFILE}  >>current.out 2>&1
+echo job ended at `date` >>current.out
+
+export SAVEDIR=${SLURM_SUBMIT_DIR}'/tests/serial_pc_out.'${PBS_JOBID}
+mkdir ${SAVEDIR}
+mv current.out ${SAVEDIR}

@@ -1,0 +1,6 @@
+sbatch batch_file
+squeue -u mengfan
+scancel [jobid]
+/fs/ess/PAS1906/submit/CSE5441/submit
+
+:set fo-=r //关注释

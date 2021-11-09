@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --account=PAS1906
+#SBATCH --cluster=owens
+#SBATCH --nodes=1
+#SBATCH --gpus-per-node=1
+#SBATCH --time=08:00:00
+#SBATCH --job-name=lab4
+export DATAFILE='data/PC_data_t00100'
+export EXECFILE='lab4_mengfan_zhu.2420_arbitrary'
+echo job started at `date`
+echo on compute node `cat ${PBS_NODEFILE}`
+
+cd ${SLURM_SUBMIT_DIR}
+cp ${DATAFILE} ${TMPDIR}
+cd ${TMPDIR}
+echo ${EXECFILE} ${DATAFILE}  >>current.out
+echo job started at `date` >>current.out
+time ${SLURM_SUBMIT_DIR}/${EXECFILE} <${DATAFILE}  >>current.out 2>&1
+echo job ended at `date` >>current.out
+
+export SAVEDIR=${SLURM_SUBMIT_DIR}'/results'
+# mkdir ${SAVEDIR}
+mv current.out ${PBS_JOBID}.out
+mv ${PBS_JOBID}.out ${SAVEDIR}
